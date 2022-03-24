@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arda Baygın 990 11-E</title>
+    <style>
+        body {
+            background-image: url('images/zemin.jpg');
+            width: 100%;
+        }
+
+        #yuzdeseksen {
+        width: 80%;
+
+        }
+
+        #kutular {
+            margin-top: 10px;
+            margin-left: 250px;
+            border-radius: 15px;
+            border: solid;
+            background-color: gray;
+            width: 850px;
+            height: 160px;
+        }
+
+        #soru_yazisi {
+            color: rgb(0, 38, 255);
+            font-size: 40px;
+            text-align: center;
+        }
+
+        button#d_y:hover {
+            color: white;
+            margin-left: 135px;
+            margin-top: 45px;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 200px;
+            height: 25px;
+            background-color: blue;
+        }
+
+        button#d_y {
+            margin-left: 135px;
+            margin-top: 45px;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 200px;
+            height: 25px;
+        }
+
+        #yazi_kutusu {
+            margin-left: 275px;
+            margin-top: 60px;
+            border-radius: 20px;
+            background-color: red;
+            height: 50px;
+            width: 250px;
+        }
+
+        input {
+            margin-top: 9px;
+            margin-left: 35px;
+            height: 25px;
+            width: 200x;
+        }
+
+        button#tikla {
+            color: white;
+            background-color: red;
+            margin-top: 65px;
+            float: right;
+            width: 120px;
+            height: 45px;
+        }
+
+        button#tikla:hover {
+        
+            color: white;
+            background-color: blue;
+            margin-top: 65px;
+            float: right;
+            width: 120px;
+            height: 45px;
+        }
+        
+
+        #dog_yan_kutu {
+          
+             
+             display:inline-block;
+            
+        }
+        #dog_yan3 {
+            display:inline-block;
+            margin-left: 225px;
+            border-radius: 10px;
+            margin-top: 10px;
+            background-color: greenyellow;
+            width: 150px;
+            height: 50px;
+        }
+        #dog_yan2 {
+            display:inline-block;
+            margin-left: 225px;
+            border-radius: 10px;
+            margin-top: 10px;
+            background-color: greenyellow;
+            width: 150px;
+            height: 50px;
+        }
+        #dog_yan {
+            display:inline-block;
+            margin-left: 225px;
+            border-radius: 10px;
+            margin-top: 10px;
+            background-color: greenyellow;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="yuzdeseksen">
+        <div id="kutular">
+            <div id="soru_yazisi">Kaplumbağa sürüngen bir hayvan mıdır?</div>
+            <button id="d_y" onclick="dogru()" >Doğru</button>
+            <button id="d_y" onclick="yanlıs()" >Yanlış</button>
+        </div>
+        <div id="kutular">
+            <div id="soru_yazisi">Deve Çöl ortamına dayanıklı değildir?</div>
+            <button id="d_y" onclick="yanlıs2()">Doğru</button>
+            <button id="d_y" onclick="dogru2()">Yanlış</button>
+        </div>
+        <div id="kutular">
+            <div id="soru_yazisi">İlk evcilleştirilen hayvanı yazınız?</div>
+            <button id="tikla" onclick="deneme() ">Tıkla</button>
+            <div id="yazi_kutusu">
+                <input type="text" id="yazi1">
+            </div>
+        </div>
+
+
+
+        <div id="dog_yan_kutu">
+            <img id="dog_yan">
+        </div>
+
+        <div id="dog_yan_kutu">
+            <img id="dog_yan2">
+        </div>
+        <div id="dog_yan_kutu">
+            
+            <img id="dog_yan3">
+        </div>
+
+
+
+    </div>
+    
+<script>
+function dogru(){
+    document.getElementById("dog_yan").src = "images/onay.png";
+}
+function yanlıs(){
+    document.getElementById("dog_yan").src = "images/red.png";
+}
+function dogru2(){
+    document.getElementById("dog_yan2").src = "images/onay.png";
+}
+function yanlıs2(){
+    document.getElementById("dog_yan2").src = "images/red.png";
+}
+function deneme(){
+    yaz=document.getElementById("yazi1").value;
+ if (yaz == "köpek"){
+ document.getElementById("dog_yan3").src = "images/onay.png";
+}
+ else{
+ document.getElementById("dog_yan3").src = "images/red.png";
+}
+}
+</script>
+</body>
+</html>
